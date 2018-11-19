@@ -28,6 +28,33 @@ var refresh = function()
 }
 update();
 
+function getFileName()
+{
+    return window.location.href.split('/').pop();
+}
+
+var filename = getFileName();
+var opt;
+if (filename === 'other.html')
+{
+    opt = document.querySelector('option[value="other.html"]');
+}
+else
+{
+    opt = document.querySelector('option[value="index.html"]');
+}
+opt.select = true;
+
+document.getElementById('form').select.onchange = function()
+{
+    location.href = document.getElementById('form').select.value;
+}
+
+document.getElementById('form').select.onchange = function()
+{
+    location.href = document.getElementById('form').select.value;
+}
+
 //クッキー保存 (クッキー名、クッキーの値、クッキーの有効日数)
 function setCookie(c_name, c_value, c_expirdays)
 {
