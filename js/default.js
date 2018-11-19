@@ -1,3 +1,4 @@
+//時間
 var separate_time = function (time)
 {
     var sec   = Math.floor((time / 1000) % 60);
@@ -28,6 +29,7 @@ var refresh = function()
 }
 update();
 
+//画面遷移
 function getFileName()
 {
     return window.location.href.split('/').pop();
@@ -98,3 +100,21 @@ function getCookie(c_name)
     }
     return "";
 }
+
+var last_date = getCookie('lastDate');
+if (last_date)
+{
+    document.getElementById('cookie').textContent = '前回訪れた時間：' + last_date;
+}
+else
+{
+    document.getElementById('cookie').textContent = '初めまして';
+}
+
+var current_time = new Date();
+setCookie('lastDate', current_time.toString(), 7);
+
+dicument.getElementById(remove_cookie).onsubmit = function()
+{
+    setCookie('lastDate',"",0);
+};
