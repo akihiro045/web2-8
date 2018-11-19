@@ -50,11 +50,6 @@ document.getElementById('form').select.onchange = function()
     location.href = document.getElementById('form').select.value;
 }
 
-document.getElementById('form').select.onchange = function()
-{
-    location.href = document.getElementById('form').select.value;
-}
-
 //クッキー保存 (クッキー名、クッキーの値、クッキーの有効日数)
 function setCookie(c_name, c_value, c_expirdays)
 {
