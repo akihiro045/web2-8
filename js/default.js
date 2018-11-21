@@ -99,9 +99,9 @@ else {
 var current_time = new Date();
 setCookie('lastDate', current_time.toString(), 7);
 
-//document.getElementById(remove_cookie).onsubmit = function () {
-//    setCookie('lastDate', "", 0);
-//};
+document.getElementById(remove_cookie).onsubmit = function () {
+    setCookie('lastDate', "", 0);
+};
 
 var thumbs = document.querySelectorAll(".thumb");
 for (idx in thumbs) {
